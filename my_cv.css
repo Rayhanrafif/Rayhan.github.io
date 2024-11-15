@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightskyblue;
+}
+
+.navigasi {
+    width: 100%;
+    height: 70px;
+    color: white;
+    position: fixed;
+}
+
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 40px;
+    padding-left: 30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu ul li a:hover{
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.banner {
+    background-color: #666a78;
+    height: 600px;
+    text-align: center;
+}
+
+.banner img{
+    border-radius: 100px;
+    height: 150px;
+    border: 6px solid white;
+    margin-top: 100px;
+}
+
+.banner h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.banner button{
+    margin-top: 60px;
+    padding: 10px;
+    max-width: 300px;
+    min-width: 150px;
+    border-radius: 50px;
+    border: none;
+}
+
+.banner button:hover {
+    background-color: lightskyblue;
+    border: 1px solid white;
+    color: black;
+}
+
+h1 span:before{
+    content: '';
+    animation: gerak infinite 8s ease;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 50px;
+}
+
+@keyframes gerak {
+    0% {
+        content : 'Selamat Datang';
+    }
+    50% {
+        content: 'Saya Rayhan dari X-RA';
+    }
+    100% {
+        content: 'Terimakasih sudah menonton';
+    }
+}
+
+.biodata {
+    text-align: center;
+    align-items: center;
+    background-color: skyblue;
+    width: 80%;
+    max-width: 750px;
+    height: auto;
+    margin-left: 250px;
+    padding: 2vw;
+    border-radius: 1vw;
+    border: 0.2vw solid black;
+    margin-top: 30px;
+    margin: 5vh auto;
+}
+
+.biodata ul li{
+    text-align: left;
+    list-style: none;
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.biodata ul span{
+    color: black;
+    font-style: italic;
+}
+
+.box-pendidikan {
+    text-align: center;
+    color: black;
+    margin-top: 70px;
+    align-content: center;
+    flex-direction: column;
+}
+
+.box-kiri, .box-tengah, .box-kanan {
+    max-width: 320px;
+    height: 350px;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px 18px;
+    /*margin: 60px 20px 20px 55px;*/
+    flex: 1 1 300px; /* Basis 300px, akan menyesuaikan */
+    border-radius: 10px;
+    float: left;
+    color: black;
+    align-content: center;
+}
+
+.box-kiri:hover, .box-tengah:hover, .box-kanan:hover {
+    background-color: #585c68;
+    color: white;
+}
+
+.box-pendidikan h3, p {
+    margin-top: 10px;
+    margin-bottom: 13px;
+    padding: 0px 20px;
+}
+
+.box-softskill {
+    text-align: center;
+    color: black;
+    margin: 0px auto;
+    margin-top: 30px;
+    align-content: center;
+
+}
+
+.box-lainnya {
+    text-align: center;
+    color: black;
+    margin: 0px auto;
+    margin-top: 25px;
+    align-content: center;
+}
+
+
+.box-lainnya p {
+    font-size: 11px;
+}
+
+.box-softskill p {
+    font-size: 15px;
+}
+
+.box-pendidikan p {
+    font-size: 15px;
+}
+
+.box-lainnya .box-kanan span{
+    color: maroon;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.box-lainnya .box-kanan span:hover{
+    color: aqua;
+}
+
+.box-lainnya h1, .box-softskill h1, .box-pendidikan h1 {
+    margin-bottom: 20px;
+}
+
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
