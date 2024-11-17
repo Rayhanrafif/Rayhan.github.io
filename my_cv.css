@@ -3,8 +3,8 @@
     padding: 0;
 }
 
-body {
-    background-color: lightskyblue;
+.body {
+    background-color: rgb(92, 92, 166);
 }
 
 .navigasi {
@@ -33,9 +33,14 @@ body {
 }
 
 .banner {
-    background-color: #666a78;
-    height: 600px;
+    background-color: #112e42;
+    min-height: 600px;
     text-align: center;
+    width: 100%;
+    border-radius: 10px;
+}
+.banner h1, p{
+    color: white;
 }
 
 .banner img{
@@ -60,16 +65,30 @@ body {
 }
 
 .banner button:hover {
-    background-color: lightskyblue;
+    background-color: #00abf0;
     border: 1px solid white;
     color: black;
+    color: var(--bg-color);
+    transform: scale(1.3);
+}
+
+.banner button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .9s;
 }
 
 h1 span:before{
     content: '';
     animation: gerak infinite 8s ease;
     transform: translateY(-50%);
-    color: white;
+    color: skyblue;
     font-size: 50px;
 }
 
@@ -127,7 +146,6 @@ h1 span:before{
     background-color: #f0f0f0;
     text-align: center;
     padding: 20px 18px;
-    /*margin: 60px 20px 20px 55px;*/
     flex: 1 1 300px; /* Basis 300px, akan menyesuaikan */
     border-radius: 10px;
     float: left;
@@ -136,9 +154,15 @@ h1 span:before{
 }
 
 .box-kiri:hover, .box-tengah:hover, .box-kanan:hover {
-    background-color: #585c68;
+    background-color: #00abf0;
     color: white;
-}
+    transition-property: background-color, transform;
+    transition: 200ms;
+    transform: scale(1.1);
+
+} 
+
+
 
 .box-pendidikan h3, p {
     margin-top: 10px;
@@ -148,7 +172,7 @@ h1 span:before{
 
 .box-softskill {
     text-align: center;
-    color: black;
+
     margin: 0px auto;
     margin-top: 30px;
     align-content: center;
@@ -157,7 +181,6 @@ h1 span:before{
 
 .box-lainnya {
     text-align: center;
-    color: black;
     margin: 0px auto;
     margin-top: 25px;
     align-content: center;
@@ -166,15 +189,21 @@ h1 span:before{
 
 .box-lainnya p {
     font-size: 11px;
+    color: black;
 }
+
 
 .box-softskill p {
     font-size: 15px;
+    color: black;
 }
 
 .box-pendidikan p {
     font-size: 15px;
+    color: black;
 }
+
+
 
 .box-lainnya .box-kanan span{
     color: maroon;
@@ -188,6 +217,7 @@ h1 span:before{
 
 .box-lainnya h1, .box-softskill h1, .box-pendidikan h1 {
     margin-bottom: 20px;
+
 }
 
 .item{
@@ -195,4 +225,92 @@ h1 span:before{
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+}
+
+.home-acount {
+    position: absolute;
+    width: 170px;
+    display: flex;
+    padding-top: 4rem;
+    justify-content: space-between;
+}
+
+.home-acount a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-acount a:hover{
+    color: var(--bg-color);
+    transform: scale(1.3);
+}
+
+.home-acount a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .8s;
+}
+
+.home-acount a:hover::before{
+    width: 100%;
+}
+
+.home-acount a{
+    border: 2px solid black;
+    background-color: white;
+}
+
+/*.card {
+  width: 190px;
+  height: 254px;
+  background-color: #07182E;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card h2 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 130%;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
